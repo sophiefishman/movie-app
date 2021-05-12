@@ -1,11 +1,14 @@
 Rails.application.routes.draw do
-  
-  get "/actors_all", controller: "actors", action: "actors_all"
-  
-  get "/actors_first", controller: "actors", action: "actors_first"
+ 
+  get "/actors", controller: "actors", action: "index"
 
-  get "/actors_last", controller: "actors", action: "actors_last"
+  post "/actors", controller: "actors", action: "create"
 
+  get "/actors/:id", controller: "actors", action: "show"
+
+  patch "/actors/:id", controller: "actors", action: "update"
+
+  delete "/actors/:id", controller: "actors", action: "destroy"
 
 
 end
