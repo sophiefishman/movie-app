@@ -1,5 +1,6 @@
 class ActorsController < ApplicationController
 
+
   def index
     actor = Actor.all
     render json: actor.as_json
