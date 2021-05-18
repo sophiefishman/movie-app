@@ -1,8 +1,8 @@
 class MoviesController < ApplicationController
 
   def index
-    movie = Movie.find_by(english: "yes")
-    render json: movie
+    movie = Movie.find_by(english: true)
+    render json: movie.as_json
     
   end
 
