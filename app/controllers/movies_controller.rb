@@ -1,6 +1,10 @@
 class MoviesController < ApplicationController
 
-
+  def index
+    movie = Movie.find_by(english: "yes")
+    render json: movie
+    
+  end
 
   def create
     movie = Movie.new(
