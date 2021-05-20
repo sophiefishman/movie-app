@@ -1,4 +1,7 @@
 class Movie < ApplicationRecord
+
+  has_many :actors
+
   attribute :english, :string, default: "true"
 
   validates :title, presence: true
